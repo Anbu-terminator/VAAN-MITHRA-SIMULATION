@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 30% 6%;
+    --foreground: 160 100% 65%;
+
+    --card: 220 35% 10%;
+    --card-foreground: 160 100% 65%;
+
+    --popover: 220 35% 10%;
+    --popover-foreground: 160 100% 65%;
+
+    --primary: 160 100% 45%;
+    --primary-foreground: 220 30% 6%;
+
+    --secondary: 210 60% 20%;
+    --secondary-foreground: 160 100% 65%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 160 40% 50%;
+
+    --accent: 45 100% 55%;
+    --accent-foreground: 220 30% 6%;
+
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 60% 25%;
+    --input: 220 25% 18%;
+    --ring: 160 100% 45%;
+
+    --radius: 0.5rem;
+
+    /* Custom aerospace tokens */
+    --neon-green: 160 100% 65%;
+    --neon-cyan: 185 100% 55%;
+    --neon-amber: 45 100% 55%;
+    --neon-red: 0 85% 55%;
+    --navy-deep: 220 30% 6%;
+    --navy-mid: 220 35% 10%;
+    --navy-light: 220 25% 18%;
+    --panel-bg: 220 35% 8%;
+    --hud-glow: 0 0% 0% / 0.6;
+
+    --sidebar-background: 220 35% 8%;
+    --sidebar-foreground: 160 100% 65%;
+    --sidebar-primary: 160 100% 45%;
+    --sidebar-primary-foreground: 220 30% 6%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 160 100% 65%;
+    --sidebar-border: 160 60% 25%;
+    --sidebar-ring: 160 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-rajdhani;
+    overflow: hidden;
+  }
+}
+
+@layer utilities {
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-share-tech {
+    font-family: 'Share Tech Mono', monospace;
+  }
+
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  .glow-green {
+    text-shadow: 0 0 8px hsl(160 100% 65% / 0.6), 0 0 20px hsl(160 100% 65% / 0.3);
+  }
+
+  .glow-cyan {
+    text-shadow: 0 0 8px hsl(185 100% 55% / 0.6), 0 0 20px hsl(185 100% 55% / 0.3);
+  }
+
+  .glow-amber {
+    text-shadow: 0 0 8px hsl(45 100% 55% / 0.6), 0 0 20px hsl(45 100% 55% / 0.3);
+  }
+
+  .glow-red {
+    text-shadow: 0 0 8px hsl(0 85% 55% / 0.6), 0 0 20px hsl(0 85% 55% / 0.3);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 10px hsl(160 100% 45% / 0.15), inset 0 0 10px hsl(160 100% 45% / 0.05);
+  }
+
+  .border-glow-cyan {
+    box-shadow: 0 0 10px hsl(185 100% 55% / 0.15), inset 0 0 10px hsl(185 100% 55% / 0.05);
+  }
+
+  .panel-glass {
+    background: hsl(220 35% 8% / 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(160 60% 25% / 0.4);
+  }
+
+  .scanline {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(160 100% 65% / 0.03) 2px,
+      hsl(160 100% 65% / 0.03) 4px
+    );
+  }
+
+  .gauge-bar {
+    background: linear-gradient(to top, hsl(160 100% 45%), hsl(185 100% 55%), hsl(45 100% 55%));
+  }
+
+  .ndvi-gradient {
+    background: linear-gradient(to right, hsl(30 60% 30%), hsl(45 80% 50%), hsl(120 60% 35%));
+  }
+}
